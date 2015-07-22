@@ -1,0 +1,72 @@
+<script src="bower_components\zepto\zepto.min.js" type="text/javascript" charset="utf-8"></script>
+<div class="images" style="display: none;">
+
+</div>
+<div class="fetch" style="display: none;">
+http://images.apple.com/cn/osx/developer/images/hero_macapps_large.jpg
+http://images.apple.com/cn/osx/developer/images/hero_macapps_large_2x.jpg
+http://images.apple.com/cn/osx/developer/images/outside_large.jpg
+http://images.apple.com/cn/osx/developer/images/outside_large_2x.jpg
+http://images.apple.com/cn/osx/developer/images/games_large.jpg
+http://images.apple.com/cn/osx/developer/images/games_large_2x.jpg
+http://images.apple.com/v/osx/c/images/developer/hero_macapps_large.jpg
+http://images.apple.com/v/osx/c/images/developer/hero_macapps_large_2x.jpg
+http://images.apple.com/v/osx/c/images/developer/outside_large.jpg
+http://images.apple.com/v/osx/c/images/developer/outside_large_2x.jpg
+http://images.apple.com/v/osx/c/images/developer/games_large.jpg
+http://images.apple.com/v/osx/c/images/developer/games_large_2x.jpg
+http://images.apple.com/v/osx/c/images/developer/games_scenekit_large.png
+http://images.apple.com/v/osx/c/images/developer/games_scenekit_large_2x.png
+http://images.apple.com/v/osx/c/images/developer/games_spritekit_large.png
+http://images.apple.com/v/osx/c/images/developer/games_spritekit_large_2x.png
+http://images.apple.com/v/osx/c/images/developer/tools_cloudkit_large.png
+http://images.apple.com/v/osx/c/images/developer/tools_cloudkit_large_2x.png
+http://images.apple.com/v/osx/c/images/developer/tools_swift_large.png
+http://images.apple.com/v/osx/c/images/developer/tools_swift_large_2x.png
+http://images.apple.com/v/osx/c/images/developer/tools_xcode_large.png
+http://images.apple.com/v/osx/c/images/developer/tools_xcode_large_2x.png
+
+</div>
+
+
+<div class="output"></div>
+<hr>
+<div class="output2"></div>
+
+<script>
+  $(function(){
+  
+  /* CSS中获取URL 
+    var temp = $('.fetch').html().split('url("');
+    $.each(temp, function(index, item){
+      var temp2 = item.split('")')[0];
+    
+      (!!index) && $('.output').append(''+temp2+'<br>');
+    });
+  */
+  
+  /*  */
+  var data = $('.fetch').html().split('\n');
+    $.each(data, function(index, item){
+      if (item !='') {
+        var output = item.split('com/')[1];
+            output2 = output.split('\/');
+        var length = output2.length;
+        var file = output2[length-1];
+        var dir = output.split(file)[0];
+            dir = dir.replace(/\//g,"\\");
+        $('.output2').append(''+'md '+dir+'<br>');
+      } 
+    });
+    $('.output2').append('<br>');
+  
+    $.each(data, function(index, item){
+      if (item !='') {
+        var output = item.split('com/');
+        console.log('wget '+item+' -O '+output[1]);
+        $('.output2').append(''+'wget '+item+' -O '+output[1]+'<br>');
+      } 
+    });
+    
+  });
+</script>

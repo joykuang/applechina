@@ -1,0 +1,127 @@
+/*Font layout*/
+.puncuation{letter-spacing: -0.1em;}
+.verticalalign { vertical-align: 2px; }
+.space { margin-left:25px; }
+/*no warp end*/
+
+.main .eyebrow {
+	font-family: "PingHei","Lucida Grande", "Lucida Sans Unicode", "STHeitiSC", "Helvetica","Arial","Verdana","sans-serif";
+    font-size: 21px;
+    line-height: 1.1;
+}
+@media only screen and (max-width: 1068px) {
+    .main .eyebrow {
+        font-size: 15px;    }
+}
+
+@media only screen and (max-width: 735px) and (max-device-width: 768px) {
+    .main .eyebrow {
+        font-size: 21px;
+    }
+}
+
+.main .hero-headline {
+	font-family: "PingHei","Lucida Grande", "Lucida Sans Unicode", "STHeitiSC", "Helvetica","Arial","Verdana","sans-serif";
+    font-size: 65px;
+    line-height: 1.1;
+    letter-spacing: 1px
+}
+@media only screen and (max-width: 1068px) {
+    .main .hero-headline {
+        font-size: 59px;
+    }
+}
+
+@media only screen and (max-width: 735px) and (max-device-width: 768px) {
+    .main .hero-headline {
+        font-size: 45px;
+    }
+}
+
+.main .intro {
+	font-family: "PingHei","Lucida Grande", "Lucida Sans Unicode", "STHeitiSC", "Helvetica","Arial","Verdana","sans-serif";
+    font-size: 25px;
+    line-height: 1.6;
+}
+@media only screen and (max-width: 1068px) {
+    .main .intro {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 735px) and (max-device-width: 768px) {
+    .main .intro {
+        font-size: 17px;
+    }
+}
+
+.main h1 {
+	font-family: "PingHei","Lucida Grande", "Lucida Sans Unicode", "STHeitiSC", "Helvetica","Arial","Verdana","sans-serif";
+    font-size: 55px;
+    line-height: 1.1;
+    letter-spacing: 1px
+}
+@media only screen and (max-width: 1068px) {
+    .main h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 735px) and (max-device-width: 768px) {
+    .main h1 {
+        font-size: 39px;
+    }
+}
+
+.main h2 {
+	font-family: "PingHei","Lucida Grande", "Lucida Sans Unicode", "STHeitiSC", "Helvetica","Arial","Verdana","sans-serif";
+    font-size: 35px;
+    line-height: 1.1;
+    letter-spacing: 1px
+}
+@media only screen and (max-width: 1068px) {
+    .main h2 {
+        font-size: 29px;
+    }
+}
+
+@media only screen and (max-width: 735px) and (max-device-width: 768px) {
+    .main h2 {
+        font-size: 29px;
+    }
+}
+
+.violator {
+	font-family: "PingHei","Lucida Grande", "Lucida Sans Unicode", "STHeitiSC", "Helvetica","Arial","Verdana","sans-serif";
+    font-size: 15px;
+    line-height: 30px;
+    padding-top:2px;
+}
+
+/* No-Webfont */
+.main p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+@media only screen and (max-width: 1068px) {
+    .main p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 735px) and (max-device-width: 768px) {
+    .main p {
+        font-size: 16px;
+    }
+}
+
+.main .smallblock-copy {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.icon-play{ font-family: "Lucida Grande", "Lucida Sans Unicode", "STHeitiSC", "Helvetica","Arial","Verdana","sans-serif"; font-size: 14px;}
+
+.icon:before, .icon:after, .icon .icon-htc {
+    top:-1px;
+}

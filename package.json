@@ -1,0 +1,23 @@
+{
+  "name": "Apple Website Source",
+  "title": "Source OF Apple Home Page",
+  "description": "Apple Website Source, a part of Excellent-Websites",
+  "version": "1.0.0",
+  "homepage": "http://www.yueruanstudio.com",
+  "author": {
+    "name": "Joy Kuang",
+    "email": "q-cute@163.com",
+    "url": "http://joykuang.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joykuang/applechina"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/joykuang/applechina/blob/master/LICENSE.md"
+    }
+  ],
+  "keywords": ["apple", "websites", "design", "front-end"]
+}

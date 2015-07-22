@@ -1,0 +1,125 @@
+<script src="bower_components\zepto\zepto.min.js" type="text/javascript" charset="utf-8"></script>
+<div class="images" style="display: none;">
+http://images.apple.com/cn/news/images/ios_icon_large.png
+
+http://images.apple.com/cn/news/images/ios_icon_large_2x.png
+
+http://images.apple.com/cn/news/images/ios_icon_medium.png
+
+http://images.apple.com/cn/news/images/ios_icon_medium_2x.png
+
+http://images.apple.com/cn/news/images/ios_icon_small.png
+
+http://images.apple.com/cn/news/images/ios_icon_small_2x.png
+
+http://images.apple.com/cn/news/images/news_icon_large.png
+
+http://images.apple.com/cn/news/images/news_icon_large_2x.png
+
+http://images.apple.com/cn/news/images/news_icon_medium.png
+
+http://images.apple.com/cn/news/images/news_icon_medium_2x.png
+
+http://images.apple.com/cn/news/images/news_icon_small.png
+
+http://images.apple.com/cn/news/images/news_icon_small_2x.png
+
+http://images.apple.com/cn/news/images/news_hero_large.png
+
+http://images.apple.com/cn/news/images/news_hero_large_2x.png
+
+http://images.apple.com/cn/news/images/news_hero_medium.png
+
+http://images.apple.com/cn/news/images/news_hero_medium_2x.png
+
+http://images.apple.com/cn/news/images/news_hero_small.png
+
+http://images.apple.com/cn/news/images/news_hero_small_2x.png
+
+http://images.apple.com/cn/news/images/news_hero_large.png
+
+http://images.apple.com/cn/news/images/news_hero_large_2x.png
+
+http://images.apple.com/cn/news/images/news_hero_medium.png
+
+http://images.apple.com/cn/news/images/news_hero_medium_2x.png
+
+http://images.apple.com/cn/news/images/news_hero_small.png
+
+http://images.apple.com/cn/news/images/news_hero_small_2x.png
+
+http://images.apple.com/cn/news/images/experience_large.jpg
+
+http://images.apple.com/cn/news/images/experience_large_2x.jpg
+
+http://images.apple.com/cn/news/images/experience_medium.jpg
+
+http://images.apple.com/cn/news/images/experience_medium_2x.jpg
+
+http://images.apple.com/cn/news/images/experience_small.jpg
+
+http://images.apple.com/cn/news/images/experience_small_2x.jpg
+
+http://images.apple.com/cn/news/images/experience_top_medium.jpg
+
+http://images.apple.com/cn/news/images/experience_top_medium_2x.jpg
+
+http://images.apple.com/cn/news/images/experience_large.jpg
+
+http://images.apple.com/cn/news/images/experience_large_2x.jpg
+
+http://images.apple.com/cn/news/images/experience_medium.jpg
+
+http://images.apple.com/cn/news/images/experience_medium_2x.jpg
+
+http://images.apple.com/cn/news/images/experience_small.jpg
+
+http://images.apple.com/cn/news/images/experience_small_2x.jpg
+
+http://images.apple.com/cn/news/images/experience_bottom_medium.jpg
+
+http://images.apple.com/cn/news/images/experience_bottom_medium_2x.jpg
+
+http://images.apple.com/cn/news/images/sources_small.jpg
+
+http://images.apple.com/cn/news/images/sources_small_2x.jpg
+
+http://images.apple.com/cn/news/images/interest_large.png
+
+http://images.apple.com/cn/news/images/interest_large_2x.png
+
+http://images.apple.com/cn/news/images/interest_medium.png
+
+http://images.apple.com/cn/news/images/interest_medium_2x.png
+
+http://images.apple.com/cn/news/images/interest_small.jpg
+
+http://images.apple.com/cn/news/images/interest_small_2x.jpg
+
+http://images.apple.com/cn/news/images/publisher_large.jpg
+
+http://images.apple.com/cn/news/images/publisher_large_2x.jpg
+
+http://images.apple.com/cn/news/images/publisher_medium.jpg
+
+http://images.apple.com/cn/news/images/publisher_medium_2x.jpg
+
+http://images.apple.com/cn/news/images/publisher_small.jpg
+
+http://images.apple.com/cn/news/images/publisher_small_2x.jpg
+</div>
+
+<div class="output"></div>
+
+<script>
+  $(function(){
+    var data = $('.images').html().split('\n');
+    $.each(data, function(index, item){
+      if (item !='') {
+        var output = item.split('news/');
+        console.log('wget '+item+' -O '+output[1]);
+        $('.output').append('<p>'+'wget '+item+' -O '+output[1]+'</p>');
+      } 
+    });
+  });
+</script>
